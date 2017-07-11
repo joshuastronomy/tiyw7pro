@@ -1,0 +1,30 @@
+{
+  "name": "tiyw7pro",
+  "version": "1.0.0",
+  "description": "Welcome, Indy TIY Cohort 7, to our nodejs app uncommented boilerplate!  Use these files to get projects started and have a reference for every line of code.  There's a commented version available as well, if you want giant files; it's in the master branch.  We'll add to this as we get more advanced with our projects and their structure.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuastronomy/tiyw7pro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuastronomy/tiyw7pro/issues"
+  },
+  "homepage": "https://github.com/joshuastronomy/tiyw7pro#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "mongodb": "^2.2.30",
+    "mongoose": "^4.11.1",
+    "pug": "^2.0.0-rc.2"
+  }
+}
