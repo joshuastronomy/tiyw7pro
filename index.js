@@ -5,7 +5,6 @@ const myRouter = require('./routes/routes');
 const session = require('express-session');
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-const myRouter = require('./routes/routes');
 
 const app = express();
 
