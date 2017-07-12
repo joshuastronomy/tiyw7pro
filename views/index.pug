@@ -1,0 +1,25 @@
+link(rel="stylesheet", href="../public/styles.css")
+
+h1 create
+form(class="makeStat" action="/api/activities" method="post")
+  input(type="text" name="newActTxt" placeholder="Make a new activity")
+  input(type="text" name="newCount" placeholder="How may reps?")
+  input(type="submit")
+    
+
+ul
+  each trakdstats in act
+    - const activity = trakdstats.activity
+    - const id = trakdstats._id
+    ul #[a(href="/api/activities/" + id) #{activity}] 
+      form(action="/api/activities/" + id method='put')
+        input(type="text" name="putBox" placeholder="Change activity name")
+        input(type="submit") 
+      form(action="/api/activities/" + id method='delete')
+        input(type="submit" value="Delete")
+        for thing in trakdstats.activityArray
+          - const date = thing.date.toDateString()
+          - const count = thing.count 
+          li #{date} --- #{count}
+          
+          br

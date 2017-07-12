@@ -28,5 +28,5 @@ app.use(express.static('public'));
 app.use('/', myRouter);
 
 app.listen(3000, (req, res) => {
-  console.log("App is running...")
+  console.log("Trakin' some stats...")
 })
