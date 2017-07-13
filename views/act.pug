@@ -1,0 +1,19 @@
+h1 #{act.activity}
+
+
+ul
+    - const activity = act.activity
+    - const id = act._id
+    ul #{activity} 
+      form(action="/api/activities/" + id + "/stats" method='post')
+        input(type="text" name="trackBox" placeholder="It's a new day!")
+        input(type="submit") 
+        for thing in act.activityArray
+          - const date = thing.date.toDateString()
+          - const count = thing.count
+          - const tId = thing._id 
+          form(action="/api/activities/" + id + "/stats/" + tId method="delete")
+            li #{date} --- #{count} 
+            input(type="submit" value="Delete")
+          
+          br
